@@ -1,5 +1,4 @@
 
-
 def converter():
 
     weight= float(input("Enter the weight: "))
