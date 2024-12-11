@@ -12,10 +12,10 @@ def choose_cold(cold):
 
 def activities_countries(country):
     activities = {
-    "Mexico": ["visit ", "go to "],
-    "Venezuela": ["vist ....", "go to..."],
-    "Canada": ["go to", ""],
-    "Russia": ["", ""]
+    "Mexico": ["Xcaret", "Chichen Itza ", ""],
+    "Venezuela": ["Thundering Angel Falls", "Tucacas", "Isla de Margarita (Margarita Island)", ""],
+    "Canada": ["Niagara Fall", "Banff National Park & the Rocky Mountains", "Stanley Park", "Notre-Dame Basilica", "Toronto's CN Tower", "St. John's Signal Hill National Historic Site"],
+    "Russia": ["Red Square",  "Kremlin", "Novodevichy Convent", "Christ the Saviour Cathedral", "Kolomenskoe Estate", "Arbat street and Victory Park"]
 }
     return activities.get(country)
     
