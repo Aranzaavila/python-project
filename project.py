@@ -48,8 +48,16 @@ def main():
                         print(f"\n Popular activities in {country_activities}:")
                         for i, activities in enumerate(activities, start=1):
                             print(f"{i}. {activities}")
-                        break
-                    
+
+                        print("-------------------------------------")
+
+                        new_game= input("Press 'r' to restart or 'e' to end it: ")
+                        if new_game == "r":
+                            continue
+                        else:
+                            break
+                         
+            
                     elif user_answer == "no":
                         print("Bye bye!")
                         break
@@ -58,6 +66,8 @@ def main():
                         print("")
                 else:
                     continue
+
+                
 
 
             elif choice == 2:
@@ -71,18 +81,30 @@ def main():
                         print(f"\n Popular activities in {country_activities}:")
                         for i, activities in enumerate(activities, start=1):
                             print(f"{i}. {activities}")
-                        break
+                        
+                        print("-------------------------------------")
+
+                        new_game= input("Press 'r' to restart or 'e' to end it: ")
+                        if new_game == "r":
+                            continue
+                        else:
+                         break
                     
                     elif user_answer == "no":
                         print("Bye bye!")
                         break
                     else:
-                        print("Input not valid, please enter (yes/no).")
+                        print("Input not valid, please enter (yes/no):")
                         print("")
+                else:
+                    continue
+                        
+
+            
 
             elif choice == 3:
-                print("Thanks for all!")
-                print("Hope to see you soon.")
+                print("What a shame! :(")
+                print("Hope you play soon")
                 print("")
                 break
 
@@ -92,5 +114,5 @@ def main():
         except ValueError:
            print("Input not valid, try again.")
            print("")
- 
+  
 main()
