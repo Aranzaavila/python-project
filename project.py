@@ -8,7 +8,7 @@ def choose_warm(warm):
     print(f"You should go to: {random.choice(warm)}")
 
 def choose_cold(cold):
-    return random.choice(cold)
+    print(f"You should go to: {random.choice(cold)}")
 
 def activities_countries(country):
     activities = {
@@ -62,7 +62,23 @@ def main():
 
             elif choice == 2:
                 choose_cold(cold)
-                return print(f"You should go to: {cold}")
+                if cold: 
+                    user_answer = input("Do you want to knnow the activities about this country? yes/no: ").strip().lower()
+                    if user_answer == "yes":
+                        country_activities = input("Write the name of the country, please: ").capitalize().strip()
+                        
+                        activities = activities_countries(country_activities)
+                        print(f"\n Popular activities in {country_activities}:")
+                        for i, activities in enumerate(activities, start=1):
+                            print(f"{i}. {activities}")
+                        break
+                    
+                    elif user_answer == "no":
+                        print("Bye bye!")
+                        break
+                    else:
+                        print("Input not valid, please enter (yes/no).")
+                        print("")
 
             elif choice == 3:
                 print("Thanks for all!")
@@ -76,5 +92,5 @@ def main():
         except ValueError:
            print("Input not valid, try again.")
            print("")
-
+ 
 main()
