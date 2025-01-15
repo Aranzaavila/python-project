@@ -1,4 +1,8 @@
+from tkinter import Tk
 import random 
+game= Tk()
+game.title("Random destination game")
+game.size("400x500")
 
 warm = ["Mexico", "Venezuela", "Spain", "Dominican Republic", "Portugal"]
 
@@ -39,7 +43,7 @@ def main():
             choice = int(input("Choose an option: "))
 
             if choice == 1:
-                choose_warm(warm) #Gives a warm random country of the list
+                choose_warm(warm) #
                 if warm:
                     user_answer = input("Do you wanna know the activities about this country? (yes/no): ").strip().lower()
                     if user_answer == "yes":
@@ -124,3 +128,5 @@ def main():
            print("")
   
 main()
+
+game.mainloop()
