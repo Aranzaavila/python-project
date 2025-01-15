@@ -1,8 +1,4 @@
-from tkinter import Tk
 import random 
-game= Tk()
-game.title("Random destination game")
-game.size("400x500")
 
 warm = ["Mexico", "Venezuela", "Spain", "Dominican Republic", "Portugal"]
 
