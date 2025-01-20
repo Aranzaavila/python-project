@@ -18,7 +18,7 @@ def activities_countries(country):
     "Dominican Republic" : ["Bavaro Beach","Saona Island","Hoyo Azul","Los Haitises National Park","Macao Beach","Fort San Felipe"],
     "Portugal": ["The Douro Valley","Mosteiro de Santa Maria da Vitória","Convento de Cristo","Belém Tower","São Jorge Castle","Dom Luís I Bridge"],
     "Finland": ["Sea Fortress Suomenlinna","Temppeliaukio Church","Santa Claus Village","Old Market Hall","Seurasaaren Ulkomuseo","Arktikum"],
-    "Norway": ["The Vigeland Park","The Vigeland Park","Bryggen","Viking Ship Museum","Pulpit Rock","Frognerparken"],
+    "Norway": ["The Vigeland Park","Aurora borealis Tour","Bryggen","Viking Ship Museum","Pulpit Rock","Frognerparken"],
     "Iceland": ["Blue Lagoon","Thingvellir National Park","Hallgrimskirkja","Perlan","Gullfoss Falls","Jökulsárlón"],
     "Canada": ["Niagara Fall", "Banff National Park & the Rocky Mountains", "Stanley Park", "Notre-Dame Basilica", "Toronto's CN Tower", "St. John's Signal Hill National Historic Site"],
     "Russia": ["Red Square",  "Kremlin", "Novodevichy Convent", "Christ the Saviour Cathedral", "Kolomenskoe Estate", "Arbat street and Victory Park"]
@@ -39,7 +39,7 @@ def main():
             choice = int(input("Choose an option: "))
 
             if choice == 1:
-                choose_warm(warm) #
+                choose_warm(warm) 
                 if warm:
                     user_answer = input("Do you wanna know the activities about this country? (yes/no): ").strip().lower()
                     if user_answer == "yes":
@@ -107,8 +107,6 @@ def main():
                 else:
                     continue
                         
-
-            
 
             elif choice == 3:
                 print("What a shame! :(")
