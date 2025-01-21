@@ -4,32 +4,29 @@ import random
 import json 
 
 
-warm = ["Mexico", "Venezuela", "Spain", "Dominican Republic", "Portugal"]
-cold = ["Canada", "Russia", "Finland", "Norway", "Iceland"]
+#reads data from json file 
+try:
+    with open("data.json", "r") as file:
+        data= json.load(file)
+except FileNotFoundError:
+    messagebox.showerror("Error", "File not found")
+    exit()
 
-activities = {
-    "Mexico": ["Xcaret", "Chichen Itza ", "The Chapultepec Castle", "Great Pyramid of Cholula", "Tulum Ruins", "Monte Alban"],
-    "Venezuela": ["Thundering Angel Falls", "Tucacas", "Isla de Margarita (Margarita Island)", "Morrocoy National Park)", "Canaima National Park and the Gran Sabana", "Roraima"],
-    "Spain": ["The Sagrada Familia", "Alhambra Palace Granada","The Royal Palace Madrid","Seville Cathedral","Santiago de Compostela Cathedral","Costa de la Luz Beaches" ],
-    "Dominican Republic" : ["Bavaro Beach","Saona Island","Hoyo Azul","Los Haitises National Park","Macao Beach","Fort San Felipe"],
-    "Portugal": ["The Douro Valley","Mosteiro de Santa Maria da Vitória","Convento de Cristo","Belém Tower","São Jorge Castle","Dom Luís I Bridge"],
-    "Finland": ["Sea Fortress Suomenlinna","Temppeliaukio Church","Santa Claus Village","Old Market Hall","Seurasaaren Ulkomuseo","Arktikum"],
-    "Norway": ["The Vigeland Park","The Vigeland Park","Bryggen","Viking Ship Museum","Pulpit Rock","Frognerparken"],
-    "Iceland": ["Blue Lagoon","Thingvellir National Park","Hallgrimskirkja","Perlan","Gullfoss Falls","Jökulsárlón"],
-    "Canada": ["Niagara Fall", "Banff National Park & the Rocky Mountains", "Stanley Park", "Notre-Dame Basilica", "Toronto's CN Tower", "St. John's Signal Hill National Historic Site"],
-    "Russia": ["Red Square",  "Kremlin", "Novodevichy Convent", "Christ the Saviour Cathedral", "Kolomenskoe Estate", "Arbat street and Victory Park"]
-}
+warm= data["warm"]
+cold= data["cold"]
+activities= data["activities"]
 
 
 #define functions 
-
+selected_country= ""
 def weather_place(weather_type):
+    global selected_country
     if weather_type == "warm":
         selected_country = random.choice(warm)
     else:
         selected_country = random.choice(cold)
     
-    label_result.config(text=f"You should go to {selected_country}")
+    label_result.config(text=f"Your next trip will be in: {selected_country}")
     button_activities.config(state="normal")
 
 def show_activities():
@@ -48,46 +45,37 @@ def exit_game():
 #GUI window
 
 window= tk.Tk()
-
 window.title("Random destination game")
-window.geometry("400x500")
-window.config(background= "#a6ffe4")
+window.geometry("500x500")
+window.config(background= "#f7f0dc")
 
 #creates label widgets
-photo= tk.PhotoImage(file="vacation.png")
 
-label_intro= tk.Label(window, text= "Welcome to the game!", font=("Arial", 30), fg="#0a0a57", image= photo, compound= "bottom")
+
+label_intro= tk.Label(window, text= "Welcome to the game!", font=("Impact", 40, "bold"), fg="#0a6121", bg= "#91eda3")
 label_intro.pack()
 
+label_desicion= tk.Label(window, text="Choose the type of weather for your vacation:", font=("Arial", 12, "bold"), bg="#91eda3", fg="#0a6121" )
+label_desicion.pack(pady=10, padx=10)
 
-label_desicion= tk.Label(window, text="Choose the type of weather for yout vacation:", font=("Arial, 12"))
-label_desicion.pack()
+frame_buttons= tk.Frame(window, bg= "#f7f0dc")
+frame_buttons.pack(pady=22, padx=10)
 
-frame_buttons= tk.Frame(window)
-frame_buttons.pack(pady=10, padx=5)
+button_warm= tk.Button(frame_buttons, text= "Warm",bg= "#ed7272", fg="black", font=("Arial", 12, "bold"), command=lambda: weather_place("warm")) 
+button_warm.grid(row=0, column=0, padx=10, pady=10)
+button_cold= tk.Button(frame_buttons, text="Cold", fg= "white", bg="#8092ed", font=("Arial", 12, "bold"), command= lambda: weather_place("cold") )
+button_cold.grid(row=0, column=1, padx=10, pady=10)
 
-button_warm= tk.Button(frame_buttons, text= "Warm", font=("Arial", 12), command=lambda: weather_place("warm")) 
-button_warm.grid(row=0, column=1, padx=10)
-button_cold= tk.Button(frame_buttons, text="Cold", font=("Arial", 12), command= lambda: weather_place("cold") )
-button_cold.grid(row=0, column=2, padx=10)
-
-
-
-label_result= tk.Label(window, text= "Show activities", font=("Arial", 12), pady=10)
+label_result= tk.Label(window, text= "Your next trip will be in:", fg="#0a6121", bg="#91eda3", font=("Arial", 12, "bold"), pady=10)
 label_result.pack()
-
  
 
-button_activities= tk.Button(window, text="Show activities", font=("Arial", 12), state= "disabled", command=show_activities)
-button_activities.pack(pady=5)
+button_activities= tk.Button(window, text="Show activities", font=("Arial", 12), bg="#91eda3", fg="#0a6121", state= "disabled", command=show_activities)
+button_activities.pack(pady=10)
 
 
-button_exit= tk.Button(window, text="Exit",font=("Arial", 12), command=exit_game)
-button_exit.pack(pady=5)
-
-
-
-
+button_exit= tk.Button(window, text="Exit",font=("Arial", 12, "bold"), bg="gray", fg="black", command=exit_game)
+button_exit.pack(pady=10)
 
 
 window.mainloop()

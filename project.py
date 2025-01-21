@@ -1,8 +1,10 @@
 import random 
 
+
 warm = ["Mexico", "Venezuela", "Spain", "Dominican Republic", "Portugal"]
 
 cold = ["Canada", "Russia", "Finland", "Norway", "Iceland"]
+
 
 def choose_warm(warm):
     print(f"You should go to: {random.choice(warm)}")
