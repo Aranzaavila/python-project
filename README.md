@@ -5,8 +5,8 @@ This project is a simple graphical user interface (GUI) application created usin
 ## Table of contents
 - [Features](#features)
 - [Requirements](#requirements)
-- [Error Handling](#error_handling)
 - [Installation](#installation)
+- [Error Handling](#error_handling)
 - [How to run](#how_to_run)
 - [Usage](#usage)
 - [Future Enhancements](#future_enhancements)
@@ -40,7 +40,9 @@ This project is a simple graphical user interface (GUI) application created usin
 ## How to Run
 1. Open a terminal or command prompt.
 2. Navigate to the directory containing the script.
-3. Run the script using: python script_name.py
+3. Run the script using:
+´´´´bash
+python script_name.py
 5. Follow the on-screen instructions to select your preferred vacation type and view the results.
 
 ## Usage
