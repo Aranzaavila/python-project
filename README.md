@@ -6,11 +6,10 @@ This project is a simple graphical user interface (GUI) application created usin
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Error Handling](#error_handling)
 - [How to run](#how_to_run)
-- [Usage](#usage)
 - [Future Enhancements](#future_enhancements)
-- [License](#license)
 - [Author](#author)
 
 
@@ -43,7 +42,7 @@ cd random-destination-game `
 2. Select Weather: Click the Warm or Cold button to receive a suggested destination.
 3. View Activities: Once a destination is suggested, click Show Activities to see a list of popular activities.
 4. Exit: Click the Exit button to close the application
-   
+![image alt]
 ## Error Handling
 - If the data.json file is not found, an error message will be displayed, and the program will exit.
 - If no activities are available for a selected destination, the user is notified via a warning.
@@ -60,8 +59,6 @@ cd random-destination-game `
 - Include more weather types or filters (e.g., adventure destinations, family-friendly places).
 - Save user preferences and history for future sessions
 
-## License
-This project is licensed under the MIT License. Feel free to use, modify, and share it as you like.
 
 ## Author
 Aranza Avila :)
