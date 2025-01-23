@@ -1,4 +1,5 @@
 # Random Destination game
+![image alt](https://github.com/Aranzaavila/python-project/blob/08dd9e78529fa28cbb3194756999804e8cc6ac67/bg.webp)
 This project is a simple graphical user interface (GUI) application created using the Tkinter library in Python. It functions as a "Random Destination Game" where users can select a type of weather (warm or cold) to receive a random travel destination and then view activities available in that destination
 
 ## Table of contents
