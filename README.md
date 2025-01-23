@@ -8,6 +8,8 @@ This project is a simple graphical user interface (GUI) application created usin
 - [Installation](#installation)
 - [How to run](#how_to_run)
 - [Usage](#usage)
+- [Future Enhancements](#future_enhancements)
+- [Author](#author)
 
 
 ## Features
@@ -42,6 +44,12 @@ This project is a simple graphical user interface (GUI) application created usin
 3. View Activities: Once a destination is suggested, click Show Activities to see a list of popular activities.
 4. Exit: Click the Exit button to close the application
 
+## Future Enhancements
+- Add more destinations and activities.
+- Include more weather types or filters (e.g., adventure destinations, family-friendly places).
+- Save user preferences and history for future sessions
 
+## Author
+Aranza Avila :)
 
 
