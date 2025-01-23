@@ -42,7 +42,8 @@ cd random-destination-game `
 2. Select Weather: Click the Warm or Cold button to receive a suggested destination.
 3. View Activities: Once a destination is suggested, click Show Activities to see a list of popular activities.
 4. Exit: Click the Exit button to close the application
-![image alt]
+![image alt](https://github.com/Aranzaavila/python-project/blob/35f78fe57b54fe71c9de5cab79575603be3297e2/ss.GUI.png)
+
 ## Error Handling
 - If the data.json file is not found, an error message will be displayed, and the program will exit.
 - If no activities are available for a selected destination, the user is notified via a warning.
