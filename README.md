@@ -41,8 +41,7 @@ This project is a simple graphical user interface (GUI) application created usin
 1. Open a terminal or command prompt.
 2. Navigate to the directory containing the script.
 3. Run the script using:
-´´´´bash
-python script_name.py
+`python script_name.py`
 
 5. Follow the on-screen instructions to select your preferred vacation type and view the results.
 
