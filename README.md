@@ -25,7 +25,7 @@ This project is a simple graphical user interface (GUI) application created usin
 1. Clone this repository or download the project files.
 2. Ensure you have Python 3.x installed on your machine.
 3. Create a JSON file named `data.json` in the same directory as the script, structured as follows:
-
+![image alt](https://github.com/Aranzaavila/python-project/blob/f44fd51999ff4dccf16acc5ec02ecdd05786a007/ss.png)
 
 
 
