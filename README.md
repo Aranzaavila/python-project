@@ -43,6 +43,7 @@ This project is a simple graphical user interface (GUI) application created usin
 3. Run the script using:
 ´´´´bash
 python script_name.py
+
 5. Follow the on-screen instructions to select your preferred vacation type and view the results.
 
 ## Usage
