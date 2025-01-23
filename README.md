@@ -5,10 +5,12 @@ This project is a simple graphical user interface (GUI) application created usin
 ## Table of contents
 - [Features](#features)
 - [Requirements](#requirements)
+- [Error Handling](#error_handling)
 - [Installation](#installation)
 - [How to run](#how_to_run)
 - [Usage](#usage)
 - [Future Enhancements](#future_enhancements)
+- [License](#license)
 - [Author](#author)
 
 
@@ -23,6 +25,9 @@ This project is a simple graphical user interface (GUI) application created usin
 - Tkinter (usually included with Python installations)
 - JSON file (`data.json`) containing destination data
 
+## Error Handling
+- If the data.json file is not found, an error message will be displayed, and the program will exit.
+- If no activities are available for a selected destination, the user is notified via a warning.
 
 ## Installation
 1. Clone this repository or download the project files.
@@ -48,6 +53,10 @@ This project is a simple graphical user interface (GUI) application created usin
 - Add more destinations and activities.
 - Include more weather types or filters (e.g., adventure destinations, family-friendly places).
 - Save user preferences and history for future sessions
+
+## Lisence
+This project is licensed under the MIT License. Feel free to use, modify, and share it as you like.
+
 
 ## Author
 Aranza Avila :)
