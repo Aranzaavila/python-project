@@ -7,9 +7,9 @@ This project is a simple graphical user interface (GUI) application created usin
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Error Handling](#error_handling)
-- [How to run](#how_to_run)
-- [Future Enhancements](#future_enhancements)
+- [Error Handling](#errorhandling)
+- [How to run](#howtorun)
+- [Future Enhancements](#futureenhancements)
 - [Author](#author)
 
 
